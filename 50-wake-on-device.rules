@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="USB", ATTRS{idVendor}=="0b95", ATTRS{idProduct}="6802", ATTR{power/wakeup}="enabled", ATTR{driver/3-4.3/power/wakeup}="enabled" ATTR{driver/3-4.4/power/wakeup}="enabled"
