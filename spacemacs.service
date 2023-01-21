@@ -1,0 +1,22 @@
+# Starts emacs with spacemacs profile, daemonized.
+#   For more on emasc profiles see chemacs2: https://github.com/plexus/chemacs2
+#   For more on running emacs with systemd, see also https://www.emacswiki.org/emacs/EmacsAsDaemon
+# Usage:
+#  Place or symlink (full path) to ~/.config/systemd/user/spacemacs.service
+#  Reload unit file definitions: `sudo systemctl daemon-reload`
+#  Launch at startup: `sudo systemctl enable --user spacemacs`
+#  Start it now: `sudo systemctl start --user spacemacs`
+#  Connect client to server `emacsclient --create-frame --no-wait --socket-name=spacemacs`
+
+[Unit]
+Description=Spacemacs daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/emacs --with-profile spacemacs --daemon=spacemacs
+ExecStop=/usr/local/bin/emacsclient --socket-name=spacemacs -e '(kill-emacs)'
+Environment=SSH_AUTH_SOCK=%t/keyring/ssh
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
