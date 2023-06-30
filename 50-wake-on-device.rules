@@ -1,5 +1,5 @@
 # USB Keyboard
-ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="USB", ATTRS{idVendor}=="320f", ATTRS{idProduct}="500d", ATTR{power/wakeup}="enabled", ATTR{driver/3-5.2/power/wakeup}="enabled" 
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="USB", ATTRS{idVendor}=="320f", ATTRS{idProduct}="500d", ATTR{power/wakeup}="enabled", ATTR{driver/2-2.3.3/power/wakeup}="enabled" 
 
 # Wireless Mouse
-ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="USB", ATTRS{idVendor}=="25a7", ATTRS{idProduct}="fa10", ATTR{power/wakeup}="enabled", ATTR{driver/3-5.1/power/wakeup}="enabled" 
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="USB", ATTRS{idVendor}=="25a7", ATTRS{idProduct}="fa10", ATTR{power/wakeup}="enabled", ATTR{driver/2-2.3.4/power/wakeup}="enabled" 
