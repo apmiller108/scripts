@@ -2,7 +2,7 @@
 
 # Converts images in a directory to webp and resizes them. Places the converted images in a sub dir called "converted". 
 # arguments: 1) width 2) base filename 3) extension 4) path to images
-# Usage: ./convert-images.sh 800 my-image path/to/dir
+# Usage: ./convert-images.sh 800 my-image wepb path/to/dir
 
 # Check if correct number of arguments is provided
 if [ "$#" -ne 4 ]; then
